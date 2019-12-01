@@ -1,0 +1,29 @@
+#include<stdio.h>
+class integer
+{
+		int num;
+	public:
+		integer(int=0);
+		int get()const;
+		void increment(int);
+};
+inline integer::integer(int x) 
+{
+	this->num = x;
+}
+inline int integer::get()const
+{
+	return this->num;
+}
+inline void integer::increment(int x)
+{
+	this->num += x;
+}
+int main()
+{
+	integer in1(5);
+	in1.increment(3);
+	printf("%d\n",in1.get());
+	
+	return 0;
+}

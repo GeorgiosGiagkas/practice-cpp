@@ -1,0 +1,53 @@
+#include<stdio.h>
+class student
+{
+	private:
+		int roll_no;
+		double percentage
+	public:
+		student();
+		student(int,double);
+		~student();
+		int get_rollno()const;
+		double get_percentage()const;
+};
+inline student :: student()
+{
+	roll_no = 0;
+	percentage = 0.0;
+	puts(“In Default Constructor\n”);
+}
+inline student :: student(int x, double p)
+{
+	roll_no = x;
+	percentage = p;	
+	puts(“In Constructor\n”);
+}
+inline student :: ~student()
+{
+	puts(“In destructor\n”);
+}
+inline int student :: get_rollno()const
+{
+	return roll_no;
+}
+inline double student :: get_percentage()const
+{
+	return percentage;
+}
+int main()
+{
+	puts(“In main()”);
+
+	student sayema = student(101,78.56);	// C style
+	student salil(102,86.75);		// C++ style
+	
+	printf(“Sayema’s Roll number = %d\n”, sayema.get_rollno());
+	printf(“Sayema’s Marks = %0.2lf\n”, sayema.get_percentage());
+
+	printf(“Salil’s Roll number = %d\n”, salil.get_rollno());
+	printf(“Salil’s Marks = %0.2lf\n”, salil.get_percentage());
+
+	puts(“Leaving main()”);
+	return 0;
+}

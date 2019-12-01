@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+class student
+{
+    int rollno;
+public:
+    student();
+    student(int);
+    ~student();
+    int get_rollno()const;
+    void copyinstance(const student&);
+};
+inline student::student()
+{
+    puts("In Default Constructor");
+    rollno = 0;
+}
+inline student::student(int x)
+{
+    puts("In Constructor");
+    rollno = x;
+}
+inline student::~student()
+{
+    puts("In destructor");
+}
+inline int student::get_rollno()const
+{
+    return rollno;
+}
+inline void student::copyinstance(const student& s)
+{
+    rollno = s.rollno;
+}
+int main()
+{
+    student sayema;
+    sayema.copyinstance(103);
+    printf("Roll Number = %d\n",sayema.get_rollno());
+
+    return 0;
+}

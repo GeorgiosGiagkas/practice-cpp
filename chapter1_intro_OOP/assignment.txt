@@ -1,0 +1,23 @@
+Assignment
+Section 1, Lecture 21
+You are probably wearing on your wrist one of the world's most common type of object - a watch. Discuss how each of the following terms and concepts applies to the notion of a watch:
+Object
+Attributes
+Behavior
+class
+inheritance
+abstraction
+modeling
+messages
+encapsulation
+interface
+information hiding
+data members
+and member functions
+
+
+Consider Dish as a class. Think and discuss taking following points into consideration
+Objects and class 
+Functions
+Inheritance
+Polymorphism  

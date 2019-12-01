@@ -1,0 +1,69 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int* int_ptr;
+	float* float_ptr;
+	double* double_ptr;
+	char* char_ptr;
+	float** ptr_float_ptr;
+	
+	int_ptr = new int;
+	if(int_ptr == NULL)
+	{
+		printf("Memory can't be allocated\n");
+		exit(0);
+	}
+	*int_ptr = 5;
+	
+	float_ptr = new float;
+	if(float_ptr == NULL)
+	{
+		printf("Memory can't be allocated\n");
+		exit(0);
+	}
+	*float_ptr = 9.81f;
+	
+	double_ptr = new double;
+	if(double_ptr == NULL)
+	{
+		printf("Memory can't be allocated\n");
+		exit(0);
+	}
+	*double_ptr = 3.14;
+	
+	char_ptr = new char;
+	if(char_ptr == NULL)
+	{
+		printf("Memory can't be allocated\n");
+		exit(0);
+	}
+	*char_ptr = 'A';
+	
+	ptr_float_ptr = new float*;
+	if(ptr_float_ptr != NULL)
+	{
+		*ptr_float_ptr = new float;
+		if(*ptr_float_ptr != NULL)
+		{
+			**ptr_float_ptr = 3.25f;
+		}
+		else
+		{
+			printf("Memory can't be allocated\n");
+			exit(0);
+		}
+	}
+	else
+	{
+		printf("Memory can't be allocated\n");
+		exit(0);
+	}
+	
+	printf("Integer = %d\n",*int_ptr);
+	printf("Float = %f\n",*float_ptr);
+	printf("Double = %lf\n",*double_ptr);
+	printf("Character = %c\n",*char_ptr);
+	printf("Float = %f\n",**ptr_float_ptr);
+	return 0;
+}

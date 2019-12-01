@@ -1,0 +1,23 @@
+#include<stdio.h>
+class employee
+{
+    const long emp_id;
+    const long& EMP_ID;
+public:
+    employee(long = 0L);
+    long get_emp_id()const;
+};
+inline employee::employee(long x) : emp_id(x), EMP_ID(emp_id)
+{
+
+}
+long employee::get_emp_id()const
+{
+    return emp_id;
+}
+int main()
+{
+    employee e1(123456789);
+    printf("Employee ID = %ld",e1.get_emp_id());
+    return 0;
+}

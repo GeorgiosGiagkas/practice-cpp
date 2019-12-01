@@ -1,0 +1,29 @@
+#include<stdio.h>
+class keep_count
+{
+		static int counter;
+	public:
+		keep_count();
+		static int print();			// static member function declaration	
+};
+
+int keep_count :: counter = 0;		// static data member definition 
+
+keep_count :: keep_count()			// constructor
+{
+	++counter;
+}
+int keep_count :: print()			// static member function definition
+{
+	return counter;
+}
+int main()
+{
+	printf("%d\n",keep_count::print());
+	
+	keep_count kc1, kc2, kc3;		// class instantiation 
+	
+	printf("%d\n",keep_count::print());
+	
+	return 0;	
+}

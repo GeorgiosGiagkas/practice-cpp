@@ -1,0 +1,39 @@
+Practice Assignments
+Section 12, Lecture 130
+Assignment 1:
+
+Create a base class called 'shape'. Use this class to store two double type values that could be used to 
+compute the area of figures. Derive two specific classes called 'triangle' and 'rectangle' from the base 'shape'. 
+Add to the base class, a member function getData() to initialize base class data members and another member 
+function displayArea() to compute and display the area of figures. 
+ 
+Using three classes, design a program that will accept dimensions of a triangle or a rectangle interactively, 
+and display the area.      
+ 
+Remember the two values given as input will be treated as lengths of two sides in the case of rectangle, 
+and as base and height in the case of rectangle, and used as follows:
+ 
+Area of rectangle : x * y 
+Area of triangle : 1/2 * x * y
+ 
+Hint: Use virtual function mechanism
+
+
+
+
+
+
+
+Assignment 2:
+
+Extend the above program to display the area of circle. This requires addition of a new derived class 'circle' that computes the area of a circle. Hint: Remember for a circle we need only one value, its radius, but the getData() function in the base class requires two values to be passed. Make the second argument of getData() function as a default argument initialized to 0.
+
+
+
+
+
+
+
+Assignment 3:
+
+Assume that a bank maintains two kinds of accounts for customers, one called as saving account and the other as current account. The saving account provides compound interest and withdrawal facilities but no cheque book facility. The current account provides cheque book facility but no interest. Current account holders should also maintain a minimum balance and if balance falls below this level, a service charge is imposed.Create a class 'account' that stores customer name, account number, and type of account. From this derive a class current_account and saving_account to make them more specific to their requirements.                                                                                                                                                                        Include necessary member functions in order to achieve the following tasks.                                                                                                                                                                                1. Accept deposit from a customer and update balance                                                                          2. Display the balance                                                                                                      3. Compute and deposit interest                                                                                               4. Permit withdrawal and update the balance                                                                                  5. Check for the minimum balance, impose penalty and update the balance                                 

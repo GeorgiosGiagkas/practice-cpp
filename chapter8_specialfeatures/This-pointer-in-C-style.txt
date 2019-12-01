@@ -1,0 +1,22 @@
+// The program in C language
+#include<stdio.h>
+typedef struct
+{
+		int num;
+}integer;
+void increment(integer* const This, int x)
+{
+		This->num += x;
+}
+int get(const integer* const This)
+{
+		return This->num;
+}
+int main()
+{
+		integer in1 = {5};
+		increment(&in1,3);
+		printf("%d\n",get(&in1));
+		
+		return 0;
+}

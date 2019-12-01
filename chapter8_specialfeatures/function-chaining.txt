@@ -1,0 +1,36 @@
+#include<stdio.h>
+class integer
+{
+		int num;
+	public:
+		integer(int=0);
+		integer& increment(int);
+		void print();
+		~integer();
+};
+inline integer::integer(int x): num(x) 
+{
+	printf("Constructor\n");
+}
+inline void integer::print()
+{
+	printf("Number = %d\n",num);
+}
+inline integer& integer::increment(int x)
+{
+	num += x;
+	return *this;
+}
+integer::~integer()
+{
+	printf("Destructor\n");	
+}
+
+int main()
+{
+	integer in1(5);
+
+	in1.increment(2).increment(4).increment(7).print();
+
+	return 0;
+}

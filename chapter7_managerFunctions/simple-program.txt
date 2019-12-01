@@ -1,0 +1,37 @@
+#include<stdio.h>
+class student
+{
+    int roll_no;
+    float marks;
+public:
+    student(int = 0, float = 0.0f);
+    int getrollno()const;
+    float getmarks()const;
+    ~student();
+};
+student::student(int x, float y)
+{
+    printf("In constructor\n");
+    roll_no = x;
+    marks = y;
+}
+int student::getrollno()const
+{
+    return roll_no;
+}
+float student::getmarks()const
+{
+    return marks;
+}
+student::~student()
+{
+
+}
+int main()
+{
+    student sayema(101,76.89f);
+    student shweta(sayema);
+    printf("Sayema\nRoll No = %d\nMarks = %f\n",sayema.getrollno(),sayema.getmarks());
+    printf("Shweta\nRoll No = %d\nMarks = %f\n",shweta.getrollno(),shweta.getmarks());
+    return 0;
+}

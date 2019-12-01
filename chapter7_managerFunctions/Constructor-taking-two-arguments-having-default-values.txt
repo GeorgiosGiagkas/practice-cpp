@@ -1,0 +1,52 @@
+#include<stdio.h>
+class student
+{
+	private:
+		int roll_no;
+		double percentage;
+	public:
+	    // serve dual purpose of default constructor
+	    // as well as parameterized constructor
+		student(int = 0,double = 0.0);
+		~student();
+		int get_rollno()const;
+		double get_percentage()const;
+};
+
+inline student :: student(int x, double p)
+{
+	roll_no = x;
+	percentage = p;
+	puts("In Constructor\n");
+}
+inline student :: ~student()
+{
+	puts("In destructor\n");
+}
+inline int student :: get_rollno()const
+{
+	return roll_no;
+}
+inline double student :: get_percentage()const
+{
+	return percentage;
+}
+int main()
+{
+	puts("In main()");
+
+	student alex(102,86.75);
+
+	printf("Alex's Roll number = %d\n", alex.get_rollno());
+
+	printf("Alex's Marks = %0.2lf\n", alex.get_percentage());
+
+	student mark;
+
+	printf("Mark's Roll number = %d\n", mark.get_rollno());
+
+	printf("Mark's Marks = %0.2lf\n", mark.get_percentage());
+
+	puts("Leaving main()");
+	return 0;
+}

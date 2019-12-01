@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+class base 
+{
+	public:
+		virtual void identify();
+};
+void base :: identify()
+{
+	cout << "I am in the base class" << endl;
+}
+class derived : public base
+{
+	public:
+		void identify();
+};
+void derived :: identify()
+{
+	cout << "I am in the derived class" << endl;
+}
+int main()
+{
+	base& ref_base = *(new derived);
+	
+	ref_base.identify();
+	
+	delete &ref_base;
+	return 0;
+}
